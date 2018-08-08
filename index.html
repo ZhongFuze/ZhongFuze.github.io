@@ -95,87 +95,70 @@
         <h1 id="hexo-搭建过程"><a href="#hexo-搭建过程" class="headerlink" title="hexo 搭建过程"></a>hexo 搭建过程</h1><h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><p>下载地址：<a href="http://nodejs.cn/download/" title="node.js下载地址" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
 <h3 id="git环境"><a href="#git环境" class="headerlink" title="git环境"></a>git环境</h3><p>下载地址：<a href="https://gitforwindows.org/" title="git下载地址" target="_blank" rel="noopener">https://gitforwindows.org/</a></p>
 <h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><p><a href="https://github.com" title="github" target="_blank" rel="noopener">https://github.com</a></p>
-<h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3>
+<h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><p>我的文件夹建立在D盘</p>
+<p>打开Git Bash，输入：</p>
+<p><code>cd d:</code></p>
+<p><code>cd blog</code></p>
+<p>接着，输入</p>
+<p><code>npm install hexo</code></p>
+<p>如果出现说npm没有安装的话，请移步编辑用户环境变量，将npm加入环境变量中，重启git bash即可。</p>
+<p><img src="https://i.imgur.com/lxxjOZZ.png" alt="git bash command not found"></p>
+<p>再次进入文件夹执行安装命令，如果出现<br><code>npm WARN deprecated titlecase@1.1.2: no longer maintained</code>可以不用理会</p>
+<p><img src="https://i.imgur.com/k5t9hUy.png" alt="npm-install"></p>
+<p>如果目录下出现文件夹就说明初始步骤基本成功了。</p>
+<p><img src="https://i.imgur.com/zd3mocI.png" alt="success"></p>
+<h3 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init  --初始化hexo环境,这时会在目录下自动生成hexo的文件</span><br><span class="line">npm install --安装npm依赖包</span><br><span class="line">hexo generate --生成静态页面</span><br><span class="line">hexo server --生成本地服务</span><br></pre></td></tr></table></figure>
+<p>如果出现hexo command not found（笔者安装过程好坎坷啊！！！）</p>
+<p><img src="https://i.imgur.com/IUCg8Rt.png" alt="hexo not found"></p>
+<p>解决方法：找到刚刚新建的blog文件夹，xxx/blog/hexo/bin<br>将这个路径添加到环境变量(xxx为自定义的路径,笔者的就是<code>D:/blog/hexo/bin</code>)</p>
+<p>在blog路径下新建一个文件夹<code>hexo</code><br>执行hexo init需要在一个空的文件夹下执行，执行过程和结果如下图</p>
+<p><img src="https://i.imgur.com/MtKSpJR.png" alt="success install hexo"></p>
+<p><img src="https://i.imgur.com/vY6OfDn.png" alt="success install npm"></p>
+<p><img src="https://i.imgur.com/02NdrSn.png" alt="generate static page"></p>
+<p><img src="https://i.imgur.com/jWZeg9Z.png" alt="start local server"></p>
+<p>打开<code>http://localhost:4000/</code>看看是否启动成功，启动后会出现这个页面。</p>
+<p><img src="https://i.imgur.com/J23fih9.png" alt="hexo hello page"></p>
+<h3 id="发布local到internet"><a href="#发布local到internet" class="headerlink" title="发布local到internet"></a>发布local到internet</h3><p>使用github创建远程仓库，新建一个跟自己账号名字一样的空仓库</p>
+<p>接着打开本地的<code>hexo</code>文件夹中的_config.yml文件</p>
+<p><img src="https://i.imgur.com/QxQYOsE.png" alt="config"></p>
+<p>打开文件编辑</p>
+<p><img src="https://i.imgur.com/jPNRlqz.png" alt="open config.yml"></p>
+<p>文件末，将deploy修改如下：</p>
+<p>(使用自己repo地址)<br><img src="https://i.imgur.com/QG1dlfD.png" alt="my git"></p>
+<p><img src="https://i.imgur.com/K2UXXYS.png" alt="setting 1"></p>
+<p><img src="https://i.imgur.com/MTkUTla.png" alt="setting 2"></p>
+<p>编辑完成后保存。</p>
+<p>下面框住的步骤如果不想新建文章的话</p>
+<blockquote>
+<p>保存后再Git Bash 中执行 </p>
+</blockquote>
+<blockquote>
+<p><code>npm install hexo-deployer-git --save</code></p>
+</blockquote>
+<blockquote>
+<p>最后执行<br><code>hexo deploy</code><br>这一步需要保证github上拥有本机的公钥！！！</p>
+</blockquote>
+<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>在Git Bash输入<br><code>hexo new World</code></p>
+<blockquote>
+<p>注：World 是标题</p>
+</blockquote>
+<p><img src="https://i.imgur.com/nf9dS8J.png" alt="new page"></p>
+<p>在<code>xxx/blog/hexo/source/_post</code>文件夹里会有<br>World.md</p>
+<p>内容如下：<br><img src="https://i.imgur.com/3c8gyME.png" alt="world md"></p>
+<p>在之后使用md格式编辑正文并保存。</p>
+<h3 id="hexo-部署"><a href="#hexo-部署" class="headerlink" title="hexo 部署"></a>hexo 部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//生成静态文件</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//安装 hexo-deployer-git</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//部署到github</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/Fjm0Yie.png" alt="Deploy done"></p>
+<p>打开<a href="http://zhongfuze.github.io" target="_blank" rel="noopener">http://zhongfuze.github.io</a></p>
+<p>完毕</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZhongFuze.com/2018/08/08/我的第一篇文章/" data-id="cjkl4n402000190joa6vhysmk" class="article-share-link">Share</a>
+      <a data-url="http://ZhongFuze.com/2018/08/08/我的第一篇文章/" data-id="cjkl5lxsm0001bgjo6rd68pkn" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/08/08/My-New-Post/" class="article-date">
-  <time datetime="2018-08-08T12:33:09.000Z" itemprop="datePublished">2018-08-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/08/My-New-Post/">My New Post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://ZhongFuze.com/2018/08/08/My-New-Post/" data-id="cjkl4n409000390jon22p6xxo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-World" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/08/08/World/" class="article-date">
-  <time datetime="2018-08-08T12:08:16.000Z" itemprop="datePublished">2018-08-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/08/World/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://ZhongFuze.com/2018/08/08/World/" data-id="cjkl4n3zt000090jo4np0gs8j" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
     </footer>
   </div>
   
@@ -218,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZhongFuze.com/2018/08/08/hello-world/" data-id="cjkl4e99i00004kjoz2weofcq" class="article-share-link">Share</a>
+      <a data-url="http://ZhongFuze.com/2018/08/08/hello-world/" data-id="cjkl5lxsg0000bgjob4p9nwak" class="article-share-link">Share</a>
       
       
     </footer>
@@ -238,23 +221,9 @@
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-    </div>
-  </div>
-
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
-    </div>
-  </div>
-
   
     
   <div class="widget-wrap">
@@ -274,14 +243,6 @@
         
           <li>
             <a href="/2018/08/08/我的第一篇文章/">我的第一篇文章</a>
-          </li>
-        
-          <li>
-            <a href="/2018/08/08/My-New-Post/">My New Post</a>
-          </li>
-        
-          <li>
-            <a href="/2018/08/08/World/">Hello World</a>
           </li>
         
           <li>
