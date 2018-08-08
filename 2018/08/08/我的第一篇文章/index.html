@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://i.imgur.com/nf9dS8J.png">
 <meta property="og:image" content="https://i.imgur.com/3c8gyME.png">
 <meta property="og:image" content="https://i.imgur.com/Fjm0Yie.png">
-<meta property="og:updated_time" content="2018-08-08T13:16:30.481Z">
+<meta property="og:updated_time" content="2018-08-08T13:24:34.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的第一篇文章">
 <meta name="twitter:description" content="hexo 搭建过程node.js下载地址：http://nodejs.cn/download/ git环境下载地址：https://gitforwindows.org/ githubhttps://github.com 创建文件夹我的文件夹建立在D盘 打开Git Bash，输入： cd d: cd blog 接着，输入 npm install hexo 如果出现说npm没有安装的话，请移步编辑用户">
@@ -148,6 +148,12 @@
 <p>下面的步骤如果不想新建文章的话，到这就结束了<br>保存后再Git Bash 中执行 </p>
 <p><code>npm install hexo-deployer-git --save</code></p>
 <p>最后执行<br><code>hexo deploy</code><br>这一步需要保证github上拥有本机的公钥！！！</p>
+<p>备注：添加公钥方法</p>
+<p>本地创建SSH Keys<br><code>ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code></p>
+<p>邮箱即为 github 注册邮箱,之后会要求确认路径和输入密码，一路回车。</p>
+<p>成功的话会在 ~/下生成 .ssh文件夹，进去，打开 id_rsa.pub，复制里面的key即可。</p>
+<p><code>cat ~/.ssh/id_rsa.pub</code></p>
+<p>复制内容至github-Setting-GPG and SSH Keys-Add</p>
 <h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>在Git Bash输入<br><code>hexo new World</code></p>
 <blockquote>
 <p>注：World 是标题</p>
@@ -166,7 +172,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZhongFuze.com/2018/08/08/我的第一篇文章/" data-id="cjkl5qr7z0001ncjo8nfgg73g" class="article-share-link">Share</a>
+      <a data-url="http://ZhongFuze.com/2018/08/08/我的第一篇文章/" data-id="cjkl6233h0001q0jo0u49aecs" class="article-share-link">Share</a>
       
       
     </footer>

@@ -131,6 +131,12 @@
 <p>下面的步骤如果不想新建文章的话，到这就结束了<br>保存后再Git Bash 中执行 </p>
 <p><code>npm install hexo-deployer-git --save</code></p>
 <p>最后执行<br><code>hexo deploy</code><br>这一步需要保证github上拥有本机的公钥！！！</p>
+<p>备注：添加公钥方法</p>
+<p>本地创建SSH Keys<br><code>ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code></p>
+<p>邮箱即为 github 注册邮箱,之后会要求确认路径和输入密码，一路回车。</p>
+<p>成功的话会在 ~/下生成 .ssh文件夹，进去，打开 id_rsa.pub，复制里面的key即可。</p>
+<p><code>cat ~/.ssh/id_rsa.pub</code></p>
+<p>复制内容至github-Setting-GPG and SSH Keys-Add</p>
 <h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>在Git Bash输入<br><code>hexo new World</code></p>
 <blockquote>
 <p>注：World 是标题</p>
@@ -149,7 +155,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZhongFuze.com/2018/08/08/我的第一篇文章/" data-id="cjkl5qr7z0001ncjo8nfgg73g" class="article-share-link">Share</a>
+      <a data-url="http://ZhongFuze.com/2018/08/08/我的第一篇文章/" data-id="cjkl6233h0001q0jo0u49aecs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -194,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZhongFuze.com/2018/08/08/hello-world/" data-id="cjkl5qr7u0000ncjovkzyz54d" class="article-share-link">Share</a>
+      <a data-url="http://ZhongFuze.com/2018/08/08/hello-world/" data-id="cjkl623390000q0jojqdpu10m" class="article-share-link">Share</a>
       
       
     </footer>
