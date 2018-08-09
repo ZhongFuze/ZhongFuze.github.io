@@ -97,9 +97,7 @@
 <pre><code>//举个栗子~
 让我们举一个例子来说明上述问题。用户首先将三个项目{milk，apple，orange}放入购物车中，然后将{bread}添加到同一购物车中。随后，交易被确定为{milk，apple，orange，bread}。如果我们将前三个项目作为上下文而最后一个项目作为推荐的目标，现有方法可能会建议{vegetables}，如{green salad}，因为最近的上下文项目（orange和apple）。但是，目标物品面包的选择可能取决于第一个项目（milk）。在这种情况下，推荐系统应该更多地关注milk而不是orange和apple，因为milk可能与下一个选择的bread更相关。此示例显示了下一项建议的重要性，这可能会被交易中的无关项误导。此外，真实世界的交易数据通常仅指示那些项目与项目之间的订单（例如，项目时间戳）共同出现在交易中。因此，推荐具有严格订单的交易项目可能是不可能和现实的。
 </code></pre><p>作者提出一个推荐算法，这个算法不仅考虑当前交易中所有的observed items，而且还要用不同的relevance(相关性)对它们进行加权，以建立一个attentive context(注意力上下文)，以高概率输出正确的下一个项目。模型——基于注意的事务嵌入模型（ATEM），用于上下文嵌入，以在不假定顺序的情况下对每个观察到的项目进行加权。对交易数据集的实证研究证明，ATEM在准确性和新颖性方面都显着优于最先进的方法。</p>
-<h2 id="Main-Algorithm"><a href="#Main-Algorithm" class="headerlink" title="Main Algorithm"></a>Main Algorithm</h2><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<script type="math/tex; mode=display">x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</script><p>\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)</p>
+<h2 id="Main-Algorithm"><a href="#Main-Algorithm" class="headerlink" title="Main Algorithm"></a>Main Algorithm</h2><script type="math/tex; mode=display">x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}</script><p>\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)</p>
 <h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>推荐系统（RS）发挥着重要作用，特别是在商业领域。然而，大多数现有的RS理论面临各种问题，例如倾向于重复与用户可能已经选择的类似的项目。</p>
 <p>在现实数据场景中，用户可能更喜欢新颖且与手头上现有的不同的项目。为了解决这个问题，需要在交易上下文中进行新的推荐，即在交易中已经选择的内容中挖掘。一方面，分析基于RS交易序列，通过分析交易间耦合关系，产生更合理和可靠的新交易建议，例如下一个购物车(basket)和下一项目(item)建议。这些与基于user profile和item profile构建的典型RS方法完全不同。</p>
 <p>然而，当一个items集合被放入一个transaction时，仍然不清楚应该下一个项目应该推荐什么。这产生了通过分析事务内依赖性来推荐事务上下文下的下一项的需要。</p>
