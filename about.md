@@ -21,13 +21,13 @@ AIOps将人工智能应用于运维领域，基于已有的MicroServices调用�
 
 ## 概括
 
-![topology](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/topology.jpeg =800x800)
+![topology](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/topology.jpeg)
 
-![ripple_effect](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/ripple.jpeg =800x800) 
+![ripple_effect](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/ripple.jpeg) 
 
-![abnormal]](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/abnormal.jpeg =800x800)
+![abnormal](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/abnormal.jpeg)
 
-![convergence]](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/convergence.jpeg =800x800)
+![convergence](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/convergence.jpeg)
 
 
 
