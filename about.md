@@ -20,15 +20,13 @@ AIOps将人工智能应用于运维领域，基于已有的MicroServices调用�
 **Hadoop/Spark** 分布式平台
 
 ## 概括
+![topology](https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/topology.jpg =800x800)
 
-![topology](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/topology.jpeg)
+![ripple](https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/ripple.jpg =800x800)
 
-![ripple_effect](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/ripple.jpeg) 
+![abnormal](https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/abnormal.jpg =800x800)
 
-![abnormal](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/abnormal.jpeg)
-
-![convergence](https://raw.githubusercontent.com/ZhongFuze/ZhongFuze.github.io/main/images/convergence.jpeg)
-
+![convergence](https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/convergence.jpg =800x800)
 
 
 ## 版权声明
