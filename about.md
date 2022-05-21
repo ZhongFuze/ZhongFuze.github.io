@@ -5,15 +5,19 @@ permalink: /about/
 ---
 
 ## 关于我
-你好，我是程序员柠檬。
+你好，我是fuze。
 
-国内一线互联网大厂计算机软件工程师、[知乎](https://www.zhihu.com/people/ning-meng-cheng-31-94)编程领域万赞答主。
+这里是我的定时输出, 经常对感兴趣的算法尝试复现。
 
-[个人技术公众号](https://mp.weixin.qq.com/mp/homepage?__biz=MzkwOTE2OTY1Nw==&hid=1&sn=6395e40d884ce4dd3900a68a0f5a6b87&scene=18#wechat_redirect)分享编程学习路线、编程学习资源，记录技术成长，欢迎扫码添加：
+大厂程序员, 领域AIOps|后台开发|数据挖掘
+AIOps将人工智能应用于运维领域，基于已有的微服务调用数据、业务数据、日志等，通过机器学习的方式进一步推动运维自动化
 
-![公众号二维码](https://github.com/lemonchann/images/raw/master/gzh/%E6%96%87%E6%9C%AB%E6%8E%A8%E5%B9%BF%E6%96%87%E6%A1%88.png)
-
-
+主要使用 **Go**、**Python** 辅助使用C/C++、Java/Scala
+存储组件 **Redis**、**MySQL**、**TSDB/GraphDB**
+消息队列 **Pulsar**、**RabbitMQ**、**Kafka**
+数据可视化 **highcharts**、**D3.js**
+**Tensorflow/PyTorch**机器学习架构
+**Hadoop/Spark** 分布式平台
 
 ## 版权声明
 
