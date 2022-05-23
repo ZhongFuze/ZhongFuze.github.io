@@ -19,15 +19,15 @@ AIOps将人工智能应用于运维领域，基于已有的MicroServices调用�
 **Tensorflow/PyTorch** 机器学习架构
 **Hadoop/Spark** 分布式平台
 
-## 概括
-![topology](https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/topology.jpg =800x800)
+## 几张图概括下工作内容
 
-![ripple](https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/ripple.jpg =800x800)
+<img src="https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/topology.jpg" width = "1000"  alt="topology" align=center />
 
-![abnormal](https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/abnormal.jpg =800x800)
+<img src="https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/ripple.jpg" width = "1000"  alt="涟漪效应" align=center />
 
-![convergence](https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/convergence.jpg =800x800)
+<img src="https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/abnormal.jpg" width = "1000"  alt="异常检测" align=center />
 
+<img src="https://fuzecosgz-1255570631.cos.ap-guangzhou.myqcloud.com/img/convergence.jpg" width = "1000"  alt="收敛" align=center />
 
 ## 版权声明
 
